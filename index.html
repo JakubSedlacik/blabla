@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="cs-cz">
+<head>
+    <title>flexbox</title>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylflex.css" type="text/css">
+</head>
+
+<body> 
+
+<!--FIRST NAV BAR (WINDOW SIZE > 901PX)-->
+
+    <nav>
+
+        <div id="navContainer">
+            <a id="navLogo"href="#"><img src="obrazky/bla.png"></a>
+
+            <ul id="navMain">
+                 <li><a href="#1" id="home" class="navMainLink">domů</a>
+                    <ul id="ddLink-1">
+                        <li><a href="#2" id="ddLink-111">monitor</a>
+                            <ul id="ddLink-11">
+                                <li><a href="#3">BENQ</a></li>
+                                <li><a href="#4">senseye</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#5" style="margin-top: -110px;">klávesnice</a></li>
+                        <li><a href="#6" style="margin-top: -60px;">myš</a></li>
+                    </ul>
+                </li>
+                <li><a href="#7" class="navMainLink ">obloha</a></li>
+                <li><a href="#8" class="navMainLink ">mraky</a></li>
+                <li><a href="#9" class="navMainLink ">slunce</a></li>
+            </ul>
+
+            <div id="firstNavIcons">   
+                <a href="#" class="icon-facebook2"></a>
+                <a href="#" class="icon-youtube"></a>   
+                <a href="#" class="icon-twitter"></a>   
+                <a href="#" class="icon-firefox"></a>   
+                <a href="#" class="icon-instagram"></a> 
+            </div>
+        </div>
+
+        <div style="clear: both;"></div>
+
+<!--SECOND NAV BAR (WINDOW SIZE < 901PX)-->
+
+        <div id="navContainer-2">
+            <div id="menu-2">
+                <a>
+                    <i class="icon-paragraph-justify"></i>
+                    <input id="btn-0" type="button" value="0" onclick="toggle()">
+                </a>
+            </div>
+
+            <a id="navLogo-2" href="#"><img src="obrazky/bla.png"></a>
+
+            <div id="navMain-2">
+                <span>
+                    <a href="#" id="home-2">domů</a>
+                    <button id="btn-1" class="togBtn" value="0" onclick="toggle_1()">
+                    <i class="icon-plus"></i></button>
+                </span>
+
+                <span id="down-1" class="d-none">&darr;</span>
+
+                <span id="tog-0" class="d-none togThin" >
+                    <a href="#">&raquo; monitor</a>
+                    <button id="btn-2" class="togBtn" value="0" onclick="toggle_2()">
+                    <i class="icon-plus"></i></button>
+                </span>
+
+                <span id="down-2" class="d-none">&darr;</span>
+
+                <a href="#" id="tog-1" class="d-none togThin">&rsaquo; BENQ</a>
+                <a href="#" id="tog-2" class="d-none togThin">&rsaquo; senseye</a>
+                <a href="#" id="tog-3" class="d-none togThin">&raquo; klávesnice</a>
+                <a href="#" id="tog-4" class="d-none togThin">&raquo; myš</a>
+                <a href="#" class="navLink-2">obloha</a>
+                <a href="#" class="navLink-2">mraky</a>
+                <a href="#" class="navLink-2">slunce</a>
+            </div>
+
+            <div id="secondNavIcons">   
+                <a href="#" class="icon-facebook2"></a>
+                <a href="#" class="icon-youtube"></a>   
+                <a href="#" class="icon-twitter"></a>   
+                <a href="#" class="icon-firefox"></a>   
+                <a href="#" class="icon-instagram"></a> 
+            </div>
+        </div>
+    </nav>
+
+    <div id="hr-2">
+       <br><hr>
+    </div>
+
+<!--INTRO + 4 TILES-->
+
+    <main>
+        <div class="greeting">
+            <div><img id="sphynx" src="obrazky/sphynx1.jpg" alt="kočka" title="plešatá kočka"></div>
+            <div><h1>Zdar</h1></div>
+            <div><h2>Toto je Sphynx</h2></div>
+            <div><h2 id="sj">Sphynx je<span id="m1" class="changer">Kočka</span></h2></div>
+        </div>
+    
+        <div class="tile-4">
+            <div id="tile-1" class="tile">
+                <a href="#">
+                    <img id="tile-11"src="obrazky/strom.png" alt="strom">
+                    <div class="text">STROM 
+                </a></div>
+            </div>
+
+            <div id="tile-2" class="tile">
+                <a href="#">
+                    <img id="tile-22" src="obrazky/kun.png" alt="kůň">
+                    <div class="text">KŮŇ     
+                </a></div>
+            </div>
+
+            <div id="tile-3" class="tile">
+                <a href="#">
+                    <img id="tile-33" src="obrazky/pes.png" alt="pes">
+                    <div class="text">PES                  
+                </a></div>
+            </div>
+
+            <div id="tile-4" class="tile">
+                <a href="#">
+                    <img id="tile-44" src="obrazky/voda2.png" alt="voda">
+                    <div class="text">VODA                  
+                </a></div>
+            </div>
+        </div>
+
+<!--LIST OF ARTICLES-->
+
+        <p id="next">
+            DALŠÍ OBSAH
+        </p>
+
+        <div class="mainList">
+            <a class="list" href="#">Pizzeria Tina
+                <div id="list1" class="listImg">
+                    <span class="day">16</span><br>
+                    <span class="month">Bře</span>
+                </div>
+            </a>
+            <br><hr>
+            <a class="list" href="#">Smékalovo pekařství
+                <div id="list2" class="listImg">
+                    <span class="day">05</span><br>
+                    <span class="month">Bře</span>
+                </div>
+            </a><br><hr>
+            <a class="list" href="#">Pekárna Borová
+                <div id="list3" class="listImg">
+                    <span class="day">11</span><br>
+                    <span class="month">Úno</span>
+                </div>
+            </a><br><hr>
+            <a class="list" href="#">Trafika u Jardy
+                <div id="list4" class="listImg">
+                    <span class="day">24</span><br>
+                    <span class="month">Led</span>
+                </div>
+            </a><br><hr>
+            <a class="list" href="#">E.N.A.P.O.
+                <div id="list5" class="listImg">
+                    <span class="day">02</span><br>
+                    <span class="month">Led</span>
+                </div>
+            </a><br><hr>
+            <a class="list" href="#">Lékárna
+                <div id="list6" class="listImg">
+                    <span class="day">17</span><br>
+                    <span class="month">Pro</span>
+                </div>
+            </a><br><hr>
+            <a class="list" href="#">Cyklo Jožák
+                <div id="list7" class="listImg">
+                    <span class="day">30</span><br>
+                    <span class="month">Pro</span>
+                </div>
+            </a>
+        </div>
+
+        <p id="nextArticles">
+            <a href="#">VŠECHEN OBSAH</a>
+        </p>
+    </main>
+
+<!--FOOTER-->
+
+    <footer>
+        <hr class="hr-1">
+
+        <p id="footerLogo">
+            <a href="#"><img src="obrazky/bla.png"></a><br>
+            <span class="thin">JE SKORO ZATAŽENO</span>
+        </p>
+
+        <p id="footerIcons">   
+            <a href="#" class="icon-facebook2"></a>
+            <a href="#" class="icon-youtube"></a>   
+            <a href="#" class="icon-twitter"></a>   
+            <a href="#" class="icon-firefox"></a>   
+            <a href="#" class="icon-instagram"></a> 
+        </p>
+        <div style="clear: both;"></div>
+
+        <p class="thin">
+            SLEDUJTE NA INSTAGRAMU
+        </p>
+
+<!--INSTA TILES-->
+
+        <div class="insta">
+            <div>
+                <a href="#1">
+                    <img class="instaImg" src="obrazky/hora.png" alt="hory">
+                    <i class="icon-instagram instaIcon"></i>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img class="instaImg" src="obrazky/hora.png" alt="hory">
+                    <i class="icon-instagram instaIcon"></i>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img class="instaImg" src="obrazky/hora.png" alt="hory">
+                    <i class="icon-instagram instaIcon"></i>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img class="instaImg" src="obrazky/hora.png" alt="hory">
+                    <i class="icon-instagram instaIcon"></i>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img class="instaImg" src="obrazky/hora.png" alt="hory">
+                    <i class="icon-instagram instaIcon"></i>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img class="instaImg" src="obrazky/hora.png" alt="hory">
+                    <i class="icon-instagram instaIcon"></i>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img class="instaImg" src="obrazky/hora.png" alt="hory">
+                    <i class="icon-instagram instaIcon"></i>
+                </a>
+            </div>
+            <div>
+                <a href="#8">
+                    <img class="instaImg" src="obrazky/hora.png" alt="hory">
+                    <i class="icon-instagram instaIcon"></i>
+                </a>
+            </div>
+        </div>
+
+<!--BLUE FILTER-->
+
+        <svg>
+            <filter id="blue-wash">
+                <feColorMatrix type="matrix" values="0.1 0.3 0.3 0 0   0.4 0.3 0.5 0 0  1 1 1 0 0  0 0 0 1 0"/>
+            </filter>
+        </svg>
+      
+        <p id="signature">
+            vytvořil Jakub
+        </p>
+    </footer>
+
+<!--SCRIPT TOGGLE-->
+
+    <script>
+        'use strict';
+        let nav_hlv2 = document.querySelector("#navMain-2");     //toggle nav bar
+        let btn = document.querySelector("#btn-0");
+         
+        function toggle() {
+            if (btn.value === "0") {
+                nav_hlv2.style.display = "flex";
+                btn.value = "1";
+            }  
+             else if (btn.value === "1"){
+                nav_hlv2.style.display = "none";
+                btn.value = "0";
+            }
+        }
+
+        let plus_0 = document.querySelector("#btn-1");              //toggle first link (domů)
+        let down_1 = document.querySelector("#down-1");
+        let tog_0 = document.querySelector("#tog-0");
+        let tog_3 = document.querySelector("#tog-3");
+        let tog_4 = document.querySelector("#tog-4");
+
+        function toggle_1() {
+            if (plus_0.value === "0") {
+                down_1.style.display = "block";
+                tog_0.style.display = "block";
+                tog_3.style.display = "block";
+                tog_4.style.display = "block";
+                plus_0.value = "1";
+            }   
+            else if (plus_0.value === "1") {
+                down_1.style.display = "none";
+                tog_0.style.display = "none";
+                tog_3.style.display = "none";
+                tog_4.style.display = "none";
+                plus_0.value = "0";
+                plus_1.value = "0";
+                down_2.style.display = "none"
+                tog_1.style.display = "none";
+                tog_2.style.display = "none";
+            }
+        }
+
+        let plus_1 = document.querySelector("#btn-2");       //toggle second link (monitor)
+        let down_2 = document.querySelector("#down-2");
+        let tog_1 = document.querySelector("#tog-1");
+        let tog_2 = document.querySelector("#tog-2");
+
+        function toggle_2() {                  
+            if (plus_1.value === "0") {
+                down_2.style.display = "block";
+                tog_1.style.display = "block";
+                tog_2.style.display = "block";
+                plus_1.value = "1";
+            }
+            else if (plus_1.value === "1") {
+                down_2.style.display = "none";
+                tog_1.style.display = "none";
+                tog_2.style.display = "none";
+                plus_1.value = "0";
+            }
+        }
+        
+        let a = window.matchMedia("(min-width: 901px)");  //hides toggle menu after (window size > 901px)
+
+        function vratit(a) {
+            if (a.matches) {
+                nav_hlv2.style.display = "flex";
+                btn.value = "0";
+                plus_0.value = "0";
+                plus_1.value = "0";
+            }
+            else {
+                nav_hlv2.style.display = "none";
+                down_1.style.display = "none";
+                down_2.style.display = "none";
+                tog_0.style.display = "none";
+                tog_1.style.display = "none";
+                tog_2.style.display = "none";
+                tog_3.style.display = "none";
+                tog_4.style.display = "none";
+            }
+        }
+        vratit(a);
+        a.addListener(vratit);   
+    </script>
+
+<!--SCRIPT TEXT CHANGER-->
+    
+    <script>
+        'use strict';
+        setInterval(function () {changeText();}, 1700);
+    
+        let textId = 0;
+        const firstCarousel = document.querySelector('#m1');
+        function changeText() {
+            let text = " ";
+            if (textId == 3) {
+                textId = 0;
+            }
+
+            textId ++
+
+            if (textId == 1) {
+                text = 'Savec';
+            } else if (textId == 2) {
+                text = 'Plešoun';
+            } else if (textId == 3) {
+                text = 'Kočka';
+            }
+
+            firstCarousel.innerHTML = text;
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap"
+    media="none" onload="if(media!='all')media='all'">
+
+</body>
+</html>
