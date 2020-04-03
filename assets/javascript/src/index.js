@@ -1,10 +1,38 @@
+import lozad from 'lozad';
+
 'use strict';
+
+setInterval(function () {
+    changeText();
+} , 1700);
+
+let textId = 0;
+let text = ' ';
+const changingText = document.querySelector('#changer');
+
+function changeText() {
+    if (textId === 3) {
+        textId = 0;
+    }
+
+    textId ++;
+
+    if (textId === 1) {
+        text = 'Savec';
+    } else if (textId === 2) {
+        text = 'Plešoun';
+    } else if (textId === 3) {
+        text = 'Kočka';
+    }
+
+    changingText.innerHTML = text;
+}
 
 const navMain2 = document.querySelector('#navMain-2');
 const btnTogNav = document.querySelector('#btnTogNav');
 
 btnTogNav.addEventListener('click', toggleNavBar);
-     
+
 function toggleNavBar() {
     if (btnTogNav.value === '0') {
         navMain2.style.display = 'flex';
@@ -37,7 +65,7 @@ function toggleNavLink1() {
         togItem1D.style.display = 'none';
         btnTogLink0.value = '0';
         btnTogLink2.value = '0';
-        dArrow2.style.display = 'none'
+        dArrow2.style.display = 'none';
         togItem1A.style.display = 'none';
         togItem1B.style.display = 'none';
     }
@@ -63,7 +91,7 @@ function toggleNavLink2() {
         btnTogLink2.value = '0';
     }
 }
-  
+
 const a = window.matchMedia('(min-width: 901px)');
 
 function hideNavBar(a) {
@@ -78,32 +106,7 @@ function hideNavBar(a) {
 hideNavBar(a);
 a.addListener(hideNavBar);
 
-setInterval(function () {
-    changeText();
-} , 1700);
-
-let textId = 0;
-const changingText = document.querySelector('#changer');
-function changeText() {
-    let text = ' ';
-    if (textId === 3) {
-        textId = 0;
-    }
-
-    textId ++
-
-    if (textId === 1) {
-        text = 'Savec';
-    } else if (textId === 2) {
-        text = 'Plešoun';
-    } else if (textId === 3) {
-        text = 'Kočka';
-    }
-
-    changingText.innerHTML = text;
-}
-
 const observer = lozad('.lozad', {
-    rootMargin: '400px 0px',
+    rootMargin: '400px 0px'
 });
 observer.observe();
