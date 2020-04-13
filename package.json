@@ -6,6 +6,7 @@
   "devDependencies": {
     "breakpoint-sass": "^2.7.1",
     "css-loader": "^3.5.1",
+    "eslint": "^6.8.0",
     "lozad": "^1.14.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
@@ -15,6 +16,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:check": "eslint assets/js/*.js",
+    "lint:fix": "eslint --fix assets/js/*.js",
     "build": "webpack --webpack.config.js"
   },
   "repository": {
